@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTS Campus Helper | Smart Campus Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo" data-section="hero">
+        <span class="logo-icon">◆</span>
+        <span>UTS Campus Helper</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav">
+        <a href="#" class="nav-link active" data-section="map">Campus Map</a>
+        <a href="#" class="nav-link" data-section="events">Events</a>
+        <a href="#" class="nav-link" data-section="study">Study Resources</a>
+        <a href="#" class="nav-link" data-section="lostfound">Lost & Found</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero -->
+    <section id="hero" class="section active">
+      <div class="hero-content">
+        <h1>Your Smart Campus Companion</h1>
+        <p>Navigate, discover events, find study tips, report lost items, and get instant answers—all in one place.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" data-section="map">Explore Campus Map</a>
+          <a href="#" class="btn btn-secondary" data-section="events">View Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Map -->
+    <section id="map" class="section">
+      <div class="section-header">
+        <h2>Campus Map</h2>
+        <p>University of Technology Sarawak — Sibu campus</p>
+      </div>
+      <div class="map-address-bar">
+        <span class="map-address-label">Address</span>
+        <address class="map-address">
+          No. 1, Jalan Universiti, 96000 Sibu, Sarawak, Malaysia
+        </address>
+        <a href="https://www.google.com/maps/search/?api=1&query=No.+1,+Jalan+Universiti,+96000+Sibu,+Sarawak,+Malaysia" target="_blank" rel="noopener" class="btn btn-primary btn-small">Open in Google Maps</a>
+      </div>
+      <div class="map-image-wrapper">
+        <img src="assets/campus-map.png" alt="UTS Campus Map - University of Technology Sarawak" class="map-image" id="campus-map-img">
+      </div>
+      <div class="map-container">
+        <p class="map-legend-title">Building & event guide</p>
+        <div class="map-legend">
+          <span class="legend-item active" data-filter="all">All</span>
+          <span class="legend-item" data-filter="academic">Academic</span>
+          <span class="legend-item" data-filter="services">Services</span>
+          <span class="legend-item" data-filter="recreation">Recreation</span>
+        </div>
+        <div class="map-canvas">
+          <div class="map-building academic" data-building="library" data-name="Library" data-desc="24/7 study spaces, group rooms, printing.">
+            <span>Library</span>
+          </div>
+          <div class="map-building academic" data-building="tower" data-name="Admin Block" data-desc="Senate Room, admin offices, Policy Dialogue. Main Tower, Level 1.">
+            <span>Admin</span>
+          </div>
+          <div class="map-building academic" data-building="lecture" data-name="Lecture Hall A" data-desc="Keynotes & MoU/MoA sessions. Building 04.">
+            <span>Lecture A</span>
+          </div>
+          <div class="map-building academic" data-building="block7" data-name="Block 7" data-desc="Parallel Sessions at R711–712, Level 2.">
+            <span>Block 7</span>
+          </div>
+          <div class="map-building academic" data-building="block8" data-name="Block 8" data-desc="IPID Fellows Training (R806), Student Exhibition (R804–805), Ground Floor.">
+            <span>Block 8</span>
+          </div>
+          <div class="map-building services" data-building="reception" data-name="Main Entrance" data-desc="Registration Desk. Building 03.">
+            <span>Entrance</span>
+          </div>
+          <div class="map-building recreation" data-building="lawn" data-name="Central Lawn" data-desc="Outdoor space, events, roundabout area.">
+            <span>Lawn</span>
+          </div>
+        </div>
+        <div class="map-info-panel">
+          <p class="map-info-placeholder">Click a building for details</p>
+          <div class="map-info-content hidden">
+            <h3 class="map-info-name"></h3>
+            <p class="map-info-desc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events & Announcements -->
+    <section id="events" class="section">
+      <div class="section-header">
+        <h2>Events & Announcements</h2>
+        <p>Stay updated with campus life.</p>
+      </div>
+      <div class="events-grid">
+        <article class="event-card">
+          <span class="event-date">Mar 18</span>
+          <h3>Career Fair 2025</h3>
+          <p>Meet employers and explore internships. Main Hall, 10am–4pm.</p>
+          <span class="event-tag">Careers</span>
+        </article>
+        <article class="event-card">
+          <span class="event-date">Mar 20</span>
+          <h3>Study Skills Workshop</h3>
+          <p>Time management and exam prep. Library Seminar Room, 2pm.</p>
+          <span class="event-tag">Academic</span>
+        </article>
+        <article class="event-card">
+          <span class="event-date">Mar 22</span>
+          <h3>Sports Day</h3>
+          <p>Inter-faculty games at the Sports Centre. All welcome.</p>
+          <span class="event-tag">Recreation</span>
+        </article>
+        <article class="event-card announcement">
+          <span class="event-date">Ongoing</span>
+          <h3>Library Extended Hours</h3>
+          <p>24/7 access during exam period (Mar 15 – Apr 5).</p>
+          <span class="event-tag">Announcement</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Study Resources -->
+    <section id="study" class="section">
+      <div class="section-header">
+        <h2>Study Resources & Tips</h2>
+        <p>Tools and advice to help you succeed.</p>
+      </div>
+      <div class="study-tips">
+        <div class="tip-card">
+          <div class="tip-icon">📚</div>
+          <h3>Time Blocking</h3>
+          <p>Block 2–3 hour chunks for deep work. Use the Pomodoro technique: 25 min focus, 5 min break.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">✍️</div>
+          <h3>Note-Taking</h3>
+          <p>Use Cornell or outline method. Summarise in your own words and link ideas to previous topics.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🔄</div>
+          <h3>Spaced Repetition</h3>
+          <p>Review material after 1 day, 3 days, then weekly. Use flashcards (e.g. Anki) for facts.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🛌</div>
+          <h3>Rest & Sleep</h3>
+          <p>7–8 hours sleep improves memory. Short naps (20 min) can boost afternoon focus.</p>
+        </div>
+      </div>
+      <div class="resources-list">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener">Student Portal</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Library Databases</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Timetable & LMS</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Academic Support</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Lost & Found -->
+    <section id="lostfound" class="section">
+      <div class="section-header">
+        <h2>Lost & Found</h2>
+        <p>Report lost items or check if something you found has been reported.</p>
+      </div>
+      <div class="lostfound-layout">
+        <div class="lostfound-form-card">
+          <h3>Report an Item</h3>
+          <form id="lostfound-form" class="lostfound-form">
+            <label>
+              <span>Type</span>
+              <select name="type" required>
+                <option value="">Select...</option>
+                <option value="lost">I lost something</option>
+                <option value="found">I found something</option>
+              </select>
+            </label>
+            <label>
+              <span>Item description</span>
+              <input type="text" name="description" placeholder="e.g. Blue laptop bag, keys with red keychain" required>
+            </label>
+            <label>
+              <span>Location</span>
+              <input type="text" name="location" placeholder="e.g. Library, Building 2" required>
+            </label>
+            <label>
+              <span>Contact (email or phone)</span>
+              <input type="text" name="contact" placeholder="your@email.com" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Submit Report</button>
+          </form>
+        </div>
+        <div class="lostfound-list-card">
+          <h3>Recent Reports</h3>
+          <ul id="lostfound-list" class="lostfound-list">
+            <li class="lostfound-item lost">
+              <span class="item-type">Lost</span>
+              <strong>Black wallet</strong> – Library, Mar 14. Contact: lost@uts.edu
+            </li>
+            <li class="lostfound-item found">
+              <span class="item-type">Found</span>
+              <strong>USB drive</strong> – Tower lobby, Mar 13. Contact: found@uts.edu
+            </li>
+            <li class="lostfound-item lost">
+              <span class="item-type">Lost</span>
+              <strong>Glasses in case</strong> – Engineering building, Mar 12. Contact: student@uts.edu
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot -->
+  <button class="chatbot-toggle" aria-label="Open chatbot">
+    <span class="chatbot-icon">💬</span>
+  </button>
+  <div class="chatbot-panel">
+    <div class="chatbot-header">
+      <h3>UTS Campus Assistant</h3>
+      <button class="chatbot-close" aria-label="Close chatbot">×</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="chat-message bot">
+        <p>Hi! I'm your UTS campus assistant. Ask me about the library, events, buildings, lost and found, or study tips.</p>
+      </div>
+    </div>
+    <form class="chatbot-input-form" id="chatbot-form">
+      <input type="text" id="chatbot-input" placeholder="Ask a question..." autocomplete="off">
+      <button type="submit" aria-label="Send">Send</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>UTS Campus Helper — For students, by students. Not an official UTS site.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
